@@ -1,8 +1,28 @@
 -------------------------------------------------------------------------------
 Test set: selenium.AppTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 12.219 s <<< FAILURE! - in selenium.AppTest
-shouldAnswerWithTrue(selenium.AppTest)  Time elapsed: 12.185 s  <<< FAILURE!
-org.junit.ComparisonFailure: expected:<HandBook Devops[]> but was:<HandBook Devops[ - Buscar con Google]>
-	at selenium.AppTest.shouldAnswerWithTrue(AppTest.java:40)
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 43.931 s <<< FAILURE! - in selenium.AppTest
+shouldAnswerWithTrue(selenium.AppTest)  Time elapsed: 23.204 s  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+Timed out waiting for driver server to start.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'e3c35e1ceedd', ip: '172.17.0.5', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.76-linuxkit', java.version: '11.0.14'
+Driver info: driver.version: ChromeDriver
+	at selenium.AppTest.setUp(AppTest.java:26)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:20915/status] to be available after 20041 ms
+	at selenium.AppTest.setUp(AppTest.java:26)
+Caused by: java.util.concurrent.TimeoutException
+	at selenium.AppTest.setUp(AppTest.java:26)
+
+testhelloworld(selenium.AppTest)  Time elapsed: 20.039 s  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+Timed out waiting for driver server to start.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'e3c35e1ceedd', ip: '172.17.0.5', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.76-linuxkit', java.version: '11.0.14'
+Driver info: driver.version: ChromeDriver
+	at selenium.AppTest.setUp(AppTest.java:26)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:20135/status] to be available after 20000 ms
+	at selenium.AppTest.setUp(AppTest.java:26)
+Caused by: java.util.concurrent.TimeoutException
+	at selenium.AppTest.setUp(AppTest.java:26)
 

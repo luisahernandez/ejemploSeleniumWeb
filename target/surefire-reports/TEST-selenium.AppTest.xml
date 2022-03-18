@@ -1,75 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="selenium.AppTest" time="12.219" tests="1" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="selenium.AppTest" time="43.931" tests="2" errors="2" skipped="0" failures="0">
   <properties>
-    <property name="java.specification.version" value="15"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value=""/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/Users/rmenares/Documents/DevOps/selenium/target/test-classes:/Users/rmenares/Documents/DevOps/selenium/target/classes:/Users/rmenares/.m2/repository/org/seleniumhq/selenium/selenium-java/3.141.59/selenium-java-3.141.59.jar:/Users/rmenares/.m2/repository/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar:/Users/rmenares/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.jar:/Users/rmenares/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.141.59/selenium-edge-driver-3.141.59.jar:/Users/rmenares/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.141.59/selenium-firefox-driver-3.141.59.jar:/Users/rmenares/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.141.59/selenium-ie-driver-3.141.59.jar:/Users/rmenares/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.141.59/selenium-opera-driver-3.141.59.jar:/Users/rmenares/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.jar:/Users/rmenares/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.141.59/selenium-safari-driver-3.141.59.jar:/Users/rmenares/.m2/repository/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.jar:/Users/rmenares/.m2/repository/net/bytebuddy/byte-buddy/1.8.15/byte-buddy-1.8.15.jar:/Users/rmenares/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/rmenares/.m2/repository/com/google/guava/guava/25.0-jre/guava-25.0-jre.jar:/Users/rmenares/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/Users/rmenares/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar:/Users/rmenares/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar:/Users/rmenares/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/Users/rmenares/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/Users/rmenares/.m2/repository/com/squareup/okhttp3/okhttp/3.11.0/okhttp-3.11.0.jar:/Users/rmenares/.m2/repository/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar:/Users/rmenares/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/rmenares/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
-    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.class.path" value="/workspaces/ejemploSeleniumWeb/target/test-classes:/workspaces/ejemploSeleniumWeb/target/classes:/home/vscode/.m2/repository/org/seleniumhq/selenium/selenium-java/3.141.59/selenium-java-3.141.59.jar:/home/vscode/.m2/repository/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar:/home/vscode/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.jar:/home/vscode/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.141.59/selenium-edge-driver-3.141.59.jar:/home/vscode/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.141.59/selenium-firefox-driver-3.141.59.jar:/home/vscode/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.141.59/selenium-ie-driver-3.141.59.jar:/home/vscode/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.141.59/selenium-opera-driver-3.141.59.jar:/home/vscode/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.jar:/home/vscode/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.141.59/selenium-safari-driver-3.141.59.jar:/home/vscode/.m2/repository/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.jar:/home/vscode/.m2/repository/net/bytebuddy/byte-buddy/1.8.15/byte-buddy-1.8.15.jar:/home/vscode/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/home/vscode/.m2/repository/com/google/guava/guava/25.0-jre/guava-25.0-jre.jar:/home/vscode/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/home/vscode/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar:/home/vscode/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar:/home/vscode/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/home/vscode/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/home/vscode/.m2/repository/com/squareup/okhttp3/okhttp/3.11.0/okhttp-3.11.0.jar:/home/vscode/.m2/repository/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar:/home/vscode/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/vscode/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="java.vm.vendor" value="Microsoft"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.vendor.url" value="https://openjdk.java.net/"/>
-    <property name="os.name" value="Mac OS X"/>
-    <property name="java.vm.specification.version" value="15"/>
+    <property name="java.vendor.url" value="https://www.microsoft.com"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Linux"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="user.country" value="CL"/>
-    <property name="sun.boot.library.path" value="/usr/local/Cellar/openjdk/15.0.1/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/rmenares/Documents/DevOps/selenium/target/surefire/surefirebooter17450347224850101914.jar /Users/rmenares/Documents/DevOps/selenium/target/surefire 2021-01-25T16-07-59_960-jvmRun1 surefire1288608484708552579tmp surefire_02993886298960096439tmp"/>
-    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/msopenjdk-11/lib"/>
+    <property name="sun.java.command" value="/workspaces/ejemploSeleniumWeb/target/surefire/surefirebooter5213074438511334167.jar /workspaces/ejemploSeleniumWeb/target/surefire 2022-03-17T22-49-22_812-jvmRun1 surefire10460965158977191949tmp surefire_03634438105128991266tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/Users/rmenares/Documents/DevOps/selenium/target/test-classes:/Users/rmenares/Documents/DevOps/selenium/target/classes:/Users/rmenares/.m2/repository/org/seleniumhq/selenium/selenium-java/3.141.59/selenium-java-3.141.59.jar:/Users/rmenares/.m2/repository/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar:/Users/rmenares/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.jar:/Users/rmenares/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.141.59/selenium-edge-driver-3.141.59.jar:/Users/rmenares/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.141.59/selenium-firefox-driver-3.141.59.jar:/Users/rmenares/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.141.59/selenium-ie-driver-3.141.59.jar:/Users/rmenares/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.141.59/selenium-opera-driver-3.141.59.jar:/Users/rmenares/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.jar:/Users/rmenares/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.141.59/selenium-safari-driver-3.141.59.jar:/Users/rmenares/.m2/repository/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.jar:/Users/rmenares/.m2/repository/net/bytebuddy/byte-buddy/1.8.15/byte-buddy-1.8.15.jar:/Users/rmenares/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/rmenares/.m2/repository/com/google/guava/guava/25.0-jre/guava-25.0-jre.jar:/Users/rmenares/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/Users/rmenares/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar:/Users/rmenares/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar:/Users/rmenares/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/Users/rmenares/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/Users/rmenares/.m2/repository/com/squareup/okhttp3/okhttp/3.11.0/okhttp-3.11.0.jar:/Users/rmenares/.m2/repository/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar:/Users/rmenares/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/rmenares/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="surefire.test.class.path" value="/workspaces/ejemploSeleniumWeb/target/test-classes:/workspaces/ejemploSeleniumWeb/target/classes:/home/vscode/.m2/repository/org/seleniumhq/selenium/selenium-java/3.141.59/selenium-java-3.141.59.jar:/home/vscode/.m2/repository/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar:/home/vscode/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.jar:/home/vscode/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.141.59/selenium-edge-driver-3.141.59.jar:/home/vscode/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.141.59/selenium-firefox-driver-3.141.59.jar:/home/vscode/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.141.59/selenium-ie-driver-3.141.59.jar:/home/vscode/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.141.59/selenium-opera-driver-3.141.59.jar:/home/vscode/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.jar:/home/vscode/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.141.59/selenium-safari-driver-3.141.59.jar:/home/vscode/.m2/repository/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.jar:/home/vscode/.m2/repository/net/bytebuddy/byte-buddy/1.8.15/byte-buddy-1.8.15.jar:/home/vscode/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/home/vscode/.m2/repository/com/google/guava/guava/25.0-jre/guava-25.0-jre.jar:/home/vscode/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/home/vscode/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar:/home/vscode/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar:/home/vscode/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/home/vscode/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/home/vscode/.m2/repository/com/squareup/okhttp3/okhttp/3.11.0/okhttp-3.11.0.jar:/home/vscode/.m2/repository/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar:/home/vscode/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/vscode/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="user.home" value="/Users/rmenares"/>
-    <property name="user.language" value="es"/>
+    <property name="user.home" value="/home/vscode"/>
+    <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.version.date" value="2020-10-20"/>
-    <property name="java.home" value="/usr/local/Cellar/openjdk/15.0.1/libexec/openjdk.jdk/Contents/Home"/>
+    <property name="java.version.date" value="2022-01-18"/>
+    <property name="java.home" value="/usr/lib/jvm/msopenjdk-11"/>
     <property name="file.separator" value="/"/>
-    <property name="basedir" value="/Users/rmenares/Documents/DevOps/selenium"/>
-    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="basedir" value="/workspaces/ejemploSeleniumWeb"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/Users/rmenares/Documents/DevOps/selenium/target/surefire/surefirebooter17450347224850101914.jar"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/workspaces/ejemploSeleniumWeb/target/surefire/surefirebooter5213074438511334167.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
-    <property name="java.runtime.version" value="15.0.1+9"/>
-    <property name="user.name" value="rmenares"/>
+    <property name="java.runtime.version" value="11.0.14+9-LTS"/>
+    <property name="user.name" value="vscode"/>
     <property name="path.separator" value=":"/>
-    <property name="os.version" value="10.14.6"/>
+    <property name="os.version" value="5.10.76-linuxkit"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
-    <property name="localRepository" value="/Users/rmenares/.m2/repository"/>
-    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
-    <property name="java.io.tmpdir" value="/var/folders/_8/69xwztwx3y5660xwdw30_vj80000gn/T/"/>
-    <property name="java.version" value="15.0.1"/>
-    <property name="user.dir" value="/Users/rmenares/Documents/DevOps/selenium"/>
-    <property name="os.arch" value="x86_64"/>
+    <property name="java.vendor.version" value="Microsoft-30257"/>
+    <property name="localRepository" value="/home/vscode/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/microsoft/openjdk/issues"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="11.0.14"/>
+    <property name="user.dir" value="/workspaces/ejemploSeleniumWeb"/>
+    <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="java.library.path" value="/Users/rmenares/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
-    <property name="java.vm.info" value="mixed mode, sharing"/>
-    <property name="java.vendor" value="N/A"/>
-    <property name="java.vm.version" value="15.0.1+9"/>
-    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
-    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
-    <property name="java.class.version" value="59.0"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Microsoft"/>
+    <property name="java.vm.version" value="11.0.14+9-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="selenium.AppTest" time="12.185">
-    <failure message="expected:&lt;HandBook Devops[]&gt; but was:&lt;HandBook Devops[ - Buscar con Google]&gt;" type="org.junit.ComparisonFailure"><![CDATA[org.junit.ComparisonFailure: expected:<HandBook Devops[]> but was:<HandBook Devops[ - Buscar con Google]>
-	at selenium.AppTest.shouldAnswerWithTrue(AppTest.java:40)
-]]></failure>
+  <testcase name="shouldAnswerWithTrue" classname="selenium.AppTest" time="23.204">
+    <error message="Timed out waiting for driver server to start.&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;e3c35e1ceedd&apos;, ip: &apos;172.17.0.5&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.10.76-linuxkit&apos;, java.version: &apos;11.0.14&apos;&#10;Driver info: driver.version: ChromeDriver" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: 
+Timed out waiting for driver server to start.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'e3c35e1ceedd', ip: '172.17.0.5', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.76-linuxkit', java.version: '11.0.14'
+Driver info: driver.version: ChromeDriver
+	at selenium.AppTest.setUp(AppTest.java:26)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:20915/status] to be available after 20041 ms
+	at selenium.AppTest.setUp(AppTest.java:26)
+Caused by: java.util.concurrent.TimeoutException
+	at selenium.AppTest.setUp(AppTest.java:26)
+</error>
     <system-out><![CDATA[Iniciando configuraciÃ³n...
-https://www.amazon.com/
-Amazon.com: Compras en LÃ­nea de ElectrÃ³nicos, Ropa, Computadoras, Libros, DVDs y mÃ¡s
-Iniciando Pruebas...
 ]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.88 (89e2380a3e36c3464b5dd1302349b1382549290d-refs/branch-heads/4280@{#1761}) on port 30630
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-[1611601681.593][WARNING]: FromSockAddr failed on netmask
-ChromeDriver was started successfully.
-[1611601684.382][WARNING]: This version of ChromeDriver has not been tested with Chrome version 88.
-ene. 25, 2021 4:08:04 P.Â M. org.openqa.selenium.remote.ProtocolHandshake createSession
-INFORMACIÃ“N: Detected dialect: W3C
+    <system-err><![CDATA[/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: .rdatatB/à}D/Î}@@.data8&amp#22;&amp#1;0­B&amp#18;­@À.00cfg&amp#4;P®&amp#2;T­@@.rodata€: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: $&amp#20;‰&amp#31;‹: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: $&amp#28;‰&amp#23;_[Ã‹D$&amp#4;‹L$&amp#8;á&amp#24;ù&amp#24;u&amp#22;¹&amp#15;&amp#1;Ðƒà&amp#6;ƒø&amp#6;u&amp#6;¸&amp#1;Ã¸Ã‹D$&amp#4;‹L$&amp#8;á&amp#16;&amp#24;ù&amp#16;&amp#24;u&amp#22;¹&amp#15;&amp#1;Ðƒà&amp#6;ƒø&amp#6;u&amp#6;¸&amp#1;Ã¸Ã&amp#15;wÃÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌ€&amp#3;€&amp#1;€&amp#2;€&amp#4;€&amp#7;€&amp#5;€&amp#6;€&amp#2;&amp#3;&amp#1;&amp#6;&amp#7;&amp#4;&amp#5;: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: $&amp#16;‰&amp#7;‹: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: $&amp#24;‹&amp#15;&amp#15;¢‹: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: .tlsÝp®&amp#2;X­@À.voltbl&amp#1;€®&amp#2;Z­.rsrc&amp#4;®&amp#6;­@@.relocÈv&amp#3; ®x&amp#3;b­@BQœœY‰È5: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: $&amp#24;‰&amp#15;‹: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 2: &amp#11;&amp#8;: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 3: &amp#11;: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: Ç&amp#15;ùÈ&amp#15;n&amp#20;&amp#17;&amp#15;n&amp#4;3&amp#15;: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: Ç&amp#15;ùÐ&amp#12;Q&amp#28;s&amp#15;n&amp#25;&amp#15;n&amp#3;&amp#15;: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: Ç&amp#15;ùØ&amp#15;n$&amp#17;&amp#15;n&amp#4;3&amp#15;: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: Ç&amp#15;ùà&amp#15;oñ&amp#15;ùÌ&amp#15;ýæ&amp#15;oò&amp#15;ùÓ&amp#15;ýÞ&amp#15;oô&amp#15;ùã&amp#15;ýÞ&amp#15;oé&amp#15;qñ&amp#1;&amp#15;ýÊ&amp#15;qò&amp#1;&amp#15;ùê&amp#15;oÓ&amp#15;iÑ&amp#15;aÙ&amp#15;oÌ&amp#15;iÍ&amp#15;aå&amp#15;oë&amp#15;jì&amp#15;bÜ&amp#15;oâ&amp#15;já&amp#15;bÑ&amp#15;oó&amp#15;ùÜ&amp#15;ýæ&amp#15;oõ&amp#15;ùê&amp#15;ýÖ&amp#15;oô&amp#15;ùâ&amp#15;ýÖ&amp#15;oË&amp#15;qó&amp#1;&amp#15;ýÝ&amp#15;qõ&amp#1;&amp#15;ùÍ&amp#15;oê&amp#15;ië&amp#15;aÓ&amp#15;oÜ&amp#15;iÙ&amp#15;aá&amp#15;oÊ&amp#15;jÌ&amp#15;bÔ&amp#15;oå&amp#15;jã&amp#15;bë&amp#15;&amp#16;&amp#15;H&amp#8;&amp#15;h&amp#16;&amp#15;: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: Ç&amp#15;ýÞ&amp#15;qã&amp#6;&amp#15;íØ&amp#15;gØ&amp#15;~&amp#24;&amp#15;n&amp#4;&amp#26;&amp#15;: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: Ç&amp#15;ýÎ&amp#15;qá&amp#6;&amp#15;íÈ&amp#15;gÈ&amp#15;~&amp#8;&amp#15;n&amp#4;&amp#26;&amp#15;: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: Çó&amp#15;~3f&amp#15;: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: Ïó&amp#15;~43f&amp#15;: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: ×ó&amp#15;~3f&amp#15;: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: ßó&amp#15;~43f&amp#15;: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: cannot open $ÃSV‹D$&amp#16;‹L$&amp#20;‹T$&amp#24;‹$&amp#28;‹t$: Input/output error
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 4: ýÿÿó&amp#15;pí&amp#27;f&amp#15;ýÕf&amp#15;pê±f&amp#15;Õ—*ýÿÿf&amp#15;Õ¯&amp#26;ýÿÿf&amp#15;ýÕò&amp#15;pè&amp#27;f&amp#15;Õ‡: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 5: ýÿÿó&amp#15;pí&amp#27;f&amp#15;ýÅf&amp#15;pè±f&amp#15;Õ‡*ýÿÿf&amp#15;Õ¯&amp#26;ýÿÿf&amp#15;ýÅò&amp#15;pë&amp#27;f&amp#15;ÕŸ: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 6: ýÿÿó&amp#15;pí&amp#27;f&amp#15;ýÝf&amp#15;pë±f&amp#15;ÕŸ*ýÿÿf&amp#15;Õ¯&amp#26;ýÿÿf&amp#15;ýÝò&amp#15;pì&amp#27;f&amp#15;Õ§: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 7: Syntax error: "(" unexpected
+Mar 17, 2022 10:49:48 PM org.openqa.selenium.os.OsProcess checkForError
+SEVERE: org.apache.commons.exec.ExecuteException: Process exited with an error: 2 (Exit value: 2)
+]]></system-err>
+  </testcase>
+  <testcase name="testhelloworld" classname="selenium.AppTest" time="20.039">
+    <error message="Timed out waiting for driver server to start.&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;e3c35e1ceedd&apos;, ip: &apos;172.17.0.5&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.10.76-linuxkit&apos;, java.version: &apos;11.0.14&apos;&#10;Driver info: driver.version: ChromeDriver" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: 
+Timed out waiting for driver server to start.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'e3c35e1ceedd', ip: '172.17.0.5', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.76-linuxkit', java.version: '11.0.14'
+Driver info: driver.version: ChromeDriver
+	at selenium.AppTest.setUp(AppTest.java:26)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:20135/status] to be available after 20000 ms
+	at selenium.AppTest.setUp(AppTest.java:26)
+Caused by: java.util.concurrent.TimeoutException
+	at selenium.AppTest.setUp(AppTest.java:26)
+</error>
+    <system-out><![CDATA[Iniciando configuraciÃ³n...
+]]></system-out>
+    <system-err><![CDATA[/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: .rdatatB/à}D/Î}@@.data8&amp#22;&amp#1;0­B&amp#18;­@À.00cfg&amp#4;P®&amp#2;T­@@.rodata€: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: .tlsÝp®&amp#2;X­@À.voltbl&amp#1;€®&amp#2;Z­.rsrc&amp#4;®&amp#6;­@@.relocÈv&amp#3; ®x&amp#3;b­@BQœœY‰È5: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: $&amp#24;‹&amp#15;&amp#15;¢‹: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: $&amp#16;‰&amp#7;‹: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: $&amp#20;‰&amp#31;‹: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: /workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: $&amp#28;‰&amp#23;_[Ã‹D$&amp#4;‹L$&amp#8;á&amp#24;ù&amp#24;u&amp#22;¹&amp#15;&amp#1;Ðƒà&amp#6;ƒø&amp#6;u&amp#6;¸&amp#1;Ã¸Ã‹D$&amp#4;‹L$&amp#8;á&amp#16;&amp#24;ù&amp#16;&amp#24;u&amp#22;¹&amp#15;&amp#1;Ðƒà&amp#6;ƒø&amp#6;u&amp#6;¸&amp#1;Ã¸Ã&amp#15;wÃÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌÌ€&amp#3;€&amp#1;€&amp#2;€&amp#4;€&amp#7;€&amp#5;€&amp#6;€&amp#2;&amp#3;&amp#1;&amp#6;&amp#7;&amp#4;&amp#5;: not found
+$&amp#24;‰&amp#15;‹: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 2: &amp#11;&amp#8;: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 3: &amp#11;: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: Ç&amp#15;ùÈ&amp#15;n&amp#20;&amp#17;&amp#15;n&amp#4;3&amp#15;: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: Ç&amp#15;ùÐ&amp#12;Q&amp#28;s&amp#15;n&amp#25;&amp#15;n&amp#3;&amp#15;: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: Ç&amp#15;ùØ&amp#15;n$&amp#17;&amp#15;n&amp#4;3&amp#15;: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: Ç&amp#15;ùà&amp#15;oñ&amp#15;ùÌ&amp#15;ýæ&amp#15;oò&amp#15;ùÓ&amp#15;ýÞ&amp#15;oô&amp#15;ùã&amp#15;ýÞ&amp#15;oé&amp#15;qñ&amp#1;&amp#15;ýÊ&amp#15;qò&amp#1;&amp#15;ùê&amp#15;oÓ&amp#15;iÑ&amp#15;aÙ&amp#15;oÌ&amp#15;iÍ&amp#15;aå&amp#15;oë&amp#15;jì&amp#15;bÜ&amp#15;oâ&amp#15;já&amp#15;bÑ&amp#15;oó&amp#15;ùÜ&amp#15;ýæ&amp#15;oõ&amp#15;ùê&amp#15;ýÖ&amp#15;oô&amp#15;ùâ&amp#15;ýÖ&amp#15;oË&amp#15;qó&amp#1;&amp#15;ýÝ&amp#15;qõ&amp#1;&amp#15;ùÍ&amp#15;oê&amp#15;ië&amp#15;aÓ&amp#15;oÜ&amp#15;iÙ&amp#15;aá&amp#15;oÊ&amp#15;jÌ&amp#15;bÔ&amp#15;oå&amp#15;jã&amp#15;bë&amp#15;&amp#16;&amp#15;H&amp#8;&amp#15;h&amp#16;&amp#15;: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: Ç&amp#15;ýÞ&amp#15;qã&amp#6;&amp#15;íØ&amp#15;gØ&amp#15;~&amp#24;&amp#15;n&amp#4;&amp#26;&amp#15;: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: Ç&amp#15;ýÎ&amp#15;qá&amp#6;&amp#15;íÈ&amp#15;gÈ&amp#15;~&amp#8;&amp#15;n&amp#4;&amp#26;&amp#15;: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: Çó&amp#15;~3f&amp#15;: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: Ïó&amp#15;~43f&amp#15;: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: ×ó&amp#15;~3f&amp#15;: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: ßó&amp#15;~43f&amp#15;: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 1: cannot open $ÃSV‹D$&amp#16;‹L$&amp#20;‹T$&amp#24;‹$&amp#28;‹t$: Input/output error
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 4: ýÿÿó&amp#15;pí&amp#27;f&amp#15;ýÕf&amp#15;pê±f&amp#15;Õ—*ýÿÿf&amp#15;Õ¯&amp#26;ýÿÿf&amp#15;ýÕò&amp#15;pè&amp#27;f&amp#15;Õ‡: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 5: ýÿÿó&amp#15;pí&amp#27;f&amp#15;ýÅf&amp#15;pè±f&amp#15;Õ‡*ýÿÿf&amp#15;Õ¯&amp#26;ýÿÿf&amp#15;ýÅò&amp#15;pë&amp#27;f&amp#15;ÕŸ: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 6: ýÿÿó&amp#15;pí&amp#27;f&amp#15;ýÝf&amp#15;pë±f&amp#15;ÕŸ*ýÿÿf&amp#15;Õ¯&amp#26;ýÿÿf&amp#15;ýÝò&amp#15;pì&amp#27;f&amp#15;Õ§: not found
+/workspaces/ejemploSeleniumWeb/drivers/chromedriver.exe: 7: Syntax error: "(" unexpected
+Mar 17, 2022 10:50:08 PM org.openqa.selenium.os.OsProcess checkForError
+SEVERE: org.apache.commons.exec.ExecuteException: Process exited with an error: 2 (Exit value: 2)
 ]]></system-err>
   </testcase>
 </testsuite>
