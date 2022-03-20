@@ -1,21 +1,20 @@
 package selenium;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.Dimension;
+import org.junit.Before;
+import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.junit.Test;
-import org.junit.Before;
 
 /**
  * Unit test for simple App.
@@ -37,34 +36,11 @@ public class AppTest
        // driver.navigate().to("https://www.google.com");
     }
 
- /*   @Test
-    public void shouldAnswerWithTrue()
-    {
-        System.out.println("Iniciando Pruebas...");
-        WebElement searchbox = driver.findElement(By.name("q"));
-        searchbox.sendKeys("HandBook Devops");
-        searchbox.submit();
-        assertEquals("HandBook Devops - Buscar con Google", driver.getTitle());
-    }*/
-
-   /* @Test
-  public void testhelloworld() {
-    driver.get("http://localhost:8091/");
-    driver.manage().window().setSize(new Dimension(836, 693));
-    driver.findElement(By.id("floatingInput")).click();
-    {
-      WebElement element = driver.findElement(By.id("floatingInput"));
-      Actions builder = new Actions(driver);
-      builder.doubleClick(element).perform();
-    }
-    driver.findElement(By.id("floatingInput")).sendKeys("luisa.c.hernandez@gmail.com");
-    driver.findElement(By.id("floatingPassword")).sendKeys("djdjdj");
-    driver.findElement(By.cssSelector("label > input")).click();
-    driver.findElement(By.id("btn-sign-in")).click();
-  }*/
+ 
 
   @Test
   public void TestCrearUsuario() {
+    //para que cree un mail random siempre 
     String mailNuevo="Grupo5"+String.valueOf(Math.random())+"@gmail.com";;
     driver.manage().window().maximize();
     driver.get("http://automationpractice.com//index.php");
@@ -79,41 +55,29 @@ public class AppTest
     driver.findElement(By.id("customer_firstname")).click();
     driver.findElement(By.id("customer_firstname")).sendKeys("GrupoCinco");
     driver.findElement(By.id("customer_lastname")).click();
-   // driver.findElement(By.id("customer_firstname")).click();
-   // driver.findElement(By.id("customer_firstname")).sendKeys("Grupo");
+  
     driver.findElement(By.id("customer_lastname")).sendKeys("Cinco");
     driver.findElement(By.id("passwd")).click();
     driver.findElement(By.id("passwd")).sendKeys("123456789");
     driver.findElement(By.cssSelector(".account_creation:nth-child(1) > .required:nth-child(5)")).click();
-
     {
       WebDriverWait wait = new WebDriverWait(driver, 10);
       wait.until(ExpectedConditions.presenceOfElementLocated(By.id("days")));
     }
-   // driver.findElement(By.id("days")).click();
-    
+    //se elige dia de nacimiento
     driver.findElement(By.id("days")).click();
     {
       WebElement dropdown = driver.findElement(By.id("days"));
-      //*[@id="days"]/option[2]
       dropdown.findElement(By.xpath("//option[2]")).click();
     }
-    //driver.findElement(By.cssSelector("#days > option:nth-child(20)")).click();
-    {
-      WebDriverWait wait = new WebDriverWait(driver, 10);
-      wait.until(ExpectedConditions.presenceOfElementLocated(By.id("months")));
-    }
+    //se elige mes de nacimiento
     driver.findElement(By.id("months")).click();
     {
-      WebElement dropdown = driver.findElement(By.id("months"));
-            //*[@id="months"]/option[13]  @value='8589934864'
-            // Create object of the Select class
             Select se = new Select(driver.findElement(By.xpath("//*[@id='months']")));
             // Select the option by index
             se.selectByIndex(3);
-
     }
-   
+     //se elige anio de nacimiento
    {
     WebDriverWait wait = new WebDriverWait(driver, 10);
     wait.until(ExpectedConditions.presenceOfElementLocated(By.id("years")));
@@ -122,9 +86,8 @@ public class AppTest
     {
       WebElement dropdown = driver.findElement(By.id("years"));
       dropdown.findElement(By.xpath("//option[2]")).click();
-     // dropdown.findElement(By.xpath("//option[. = 'regexp:1992\\s+']")).click();
     }
-
+    //completa el resto de inforamcion
     
     driver.findElement(By.cssSelector("#years > option:nth-child(32)")).click();
     driver.findElement(By.cssSelector(".form-group > .row")).click();
@@ -153,4 +116,45 @@ public class AppTest
     driver.findElement(By.cssSelector("#submitAccount .icon-chevron-right")).click();
     driver.findElement(By.linkText("Sign out")).click();
   }
+
+  @Test
+  public void TestComprar() {
+    driver.manage().window().maximize();
+    driver.get("http://automationpractice.com/index.php");
+
+    driver.findElement(By.linkText("Sign in")).click();
+    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+    driver.findElement(By.id("email")).click();
+    driver.findElement(By.id("email")).sendKeys("grupocinco@gmail.com");
+    driver.findElement(By.id("login_form")).click();
+    driver.findElement(By.id("passwd")).click();
+    driver.findElement(By.id("passwd")).sendKeys("123456789");
+    driver.findElement(By.cssSelector("#SubmitLogin > span")).click();
+    driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+    driver.findElement(By.xpath("(//a[contains(text(),\'Dresses\')])[5]")).click();
+    //eleccion de producto
+    WebDriverWait wait = new WebDriverWait(driver, 20);
+    WebElement ele=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@title='Printed Dress']")));
+     ((JavascriptExecutor)driver).executeScript("arguments[0].click();" , ele);
+     //cambiar la cantidad
+     driver.findElement(By.id("quantity_wanted")).click();
+     driver.findElement(By.id("quantity_wanted")).clear();
+     driver.findElement(By.id("quantity_wanted")).sendKeys("2");
+  //Agregar al carro
+  driver.findElement(By.xpath("//p[@id='add_to_cart']//span[.='Add to cart']")).click();
+
+ 
+  ///Boton proceed to checkout
+  wait = new WebDriverWait(driver, 20);
+  WebElement ele2=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@title='Proceed to checkout']")));
+  ((JavascriptExecutor)driver).executeScript("arguments[0].click();" , ele2);
+
+    driver.findElement(By.cssSelector(".standard-checkout > span")).click();
+    driver.findElement(By.cssSelector(".button:nth-child(4) > span")).click();
+    driver.findElement(By.id("cgv")).click();
+    driver.findElement(By.cssSelector(".standard-checkout > span")).click();
+    driver.findElement(By.cssSelector(".bankwire > span")).click();
+    driver.findElement(By.cssSelector("#cart_navigation span")).click();
+  }
+  
 }
