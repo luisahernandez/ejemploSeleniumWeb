@@ -29,7 +29,7 @@ public class AppTest
     @Before
     public void setUp(){
         System.out.println("Iniciando configuración...");
-        System.setProperty("webdriver.chrome.driver","drivers/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","drivers/chromedriver");
         driver = new ChromeDriver();
        // driver.get("https://www.amazon.com");
         driver.manage().window().maximize();
@@ -142,7 +142,8 @@ public class AppTest
     driver.findElement(By.cssSelector("#cart_navigation span")).click();
 
     assertTrue(driver.getTitle().contains("Order confirmation - My Store"));
-
+    driver.close();
+    driver.quit();
   }
 
   @Test
@@ -184,6 +185,8 @@ public class AppTest
     driver.findElement(By.cssSelector(".bankwire > span")).click();
     driver.findElement(By.cssSelector("#cart_navigation span")).click();
     assertTrue(driver.getTitle().contains("Order confirmation - My Store"));
+    driver.close();
+    driver.quit();
   }
   
 }
