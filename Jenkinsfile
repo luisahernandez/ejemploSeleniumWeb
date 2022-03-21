@@ -1,19 +1,25 @@
 pipeline {
     agent any
     stages {
-        stage('Clean') {
+       stage('Clean & Install') {
             steps {
-                sh "mvn clean"
+                sh "mvn clean install"
             }
         }
 
-        stage('Compile') {
+        stage('Run!!!') {
             steps {
-                sh "mvn compile"
+                sh "mvn spring-boot:run &"
             }
         }
 
-        stage('Test') {
+        stage('Tutooooooo 60 segundos') {
+            steps {
+                sh 'sleep 60'
+            }
+        }
+
+        stage('Test selenium') {
             steps {
                 sh "mvn test"
             }
