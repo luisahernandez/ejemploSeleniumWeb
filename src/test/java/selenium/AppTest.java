@@ -1,5 +1,7 @@
 package selenium;
 
+import static org.junit.Assert.assertTrue;
+
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Before;
@@ -114,7 +116,33 @@ public class AppTest
     driver.findElement(By.id("phone_mobile")).click();
     driver.findElement(By.id("phone_mobile")).sendKeys("9857474411");
     driver.findElement(By.cssSelector("#submitAccount .icon-chevron-right")).click();
-    driver.findElement(By.linkText("Sign out")).click();
+    driver.findElement(By.xpath("(//a[contains(text(),\'Dresses\')])[5]")).click();
+    //eleccion de producto
+    WebDriverWait wait = new WebDriverWait(driver, 20);
+    WebElement ele=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@title='Printed Dress']")));
+     ((JavascriptExecutor)driver).executeScript("arguments[0].click();" , ele);
+     //cambiar la cantidad
+     driver.findElement(By.id("quantity_wanted")).click();
+     driver.findElement(By.id("quantity_wanted")).clear();
+     driver.findElement(By.id("quantity_wanted")).sendKeys("3");
+  //Agregar al carro
+  driver.findElement(By.xpath("//p[@id='add_to_cart']//span[.='Add to cart']")).click();
+
+ 
+  ///Boton proceed to checkout
+  wait = new WebDriverWait(driver, 20);
+  WebElement ele2=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@title='Proceed to checkout']")));
+  ((JavascriptExecutor)driver).executeScript("arguments[0].click();" , ele2);
+
+    driver.findElement(By.cssSelector(".standard-checkout > span")).click();
+    driver.findElement(By.cssSelector(".button:nth-child(4) > span")).click();
+    driver.findElement(By.id("cgv")).click();
+    driver.findElement(By.cssSelector(".standard-checkout > span")).click();
+    driver.findElement(By.cssSelector(".bankwire > span")).click();
+    driver.findElement(By.cssSelector("#cart_navigation span")).click();
+
+    assertTrue(driver.getTitle().contains("Order confirmation - My Store"));
+
   }
 
   @Test
@@ -155,6 +183,7 @@ public class AppTest
     driver.findElement(By.cssSelector(".standard-checkout > span")).click();
     driver.findElement(By.cssSelector(".bankwire > span")).click();
     driver.findElement(By.cssSelector("#cart_navigation span")).click();
+    assertTrue(driver.getTitle().contains("Order confirmation - My Store"));
   }
   
 }
